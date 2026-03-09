@@ -29,7 +29,7 @@ The following **additional** features are implemented:
 
 Here's a walkthrough of implemented required features:
 
-![Business Site Walkthrough](./Businesses.gif)
+![Business Site Walkthrough](./Businesses2.gif)
 
 GIF created with ...  Kap
 
