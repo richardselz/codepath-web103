@@ -8,7 +8,7 @@ const renderBusiness = async () => {
 
     let business = data.find(business => business.id === requestedID);
     if (business) {
-        document.getElementById('name').textContent = business.name;
+        document.getElementById('name').textContent = business.name + "abc";
         document.getElementById('type').textContent = 'Type of Business: ' + business.type;
         document.getElementById('profitability').textContent = 'Profitability: ' + business.profitability;
         document.getElementById('location').textContent = 'Locaiton: ' + business.location;
