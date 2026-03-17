@@ -12,7 +12,8 @@ const createLocationsTable = async () => {
             name VARCHAR(255) NOT NULL,
             address VARCHAR(255) NOT NULL,
             city VARCHAR(100) NOT NULL,
-            state VARCHAR(2) NOT NULL
+            state VARCHAR(2) NOT NULL,
+            image VARCHAR(500)
         )
     `
 
@@ -29,14 +30,15 @@ const seedLocationsTable = async () => {
 
     locationData.forEach((location) => {
         const insertQuery = {
-            text: 'INSERT INTO locations (name, address, city, state) VALUES ($1, $2, $3, $4)'
+            text: 'INSERT INTO locations (name, address, city, state, image) VALUES ($1, $2, $3, $4, $5)'
         }
 
         const values = [
             location.name,
             location.address,
             location.city,
-            location.state
+            location.state,
+            location.image
         ]
 
         pool.query(insertQuery, values, (err, res) => {

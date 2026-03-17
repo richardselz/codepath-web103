@@ -4,6 +4,5 @@ import LocationsController from '../controllers/locations.js';
 const router = express.Router()
 
 router.get('/', LocationsController.getLocations);
-// change below to use getLocationById shortly
-router.get('/:locationId', LocationsController.getLocations); 
+router.get('/:locationId', LocationsController.getLocationsById);
 export default router
